@@ -10,6 +10,10 @@
 
     <title>Cabañas Bosque Escondido</title>
 
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     <style>
         .carousel-item {
             height: 100vh;
@@ -102,12 +106,13 @@
                 <i class="fas fa-times"></i>
             </span>
             </button>
-            <div class="modal-body text-center">
+            <div class="modal-body text-left">
             <div class="container">
-                <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="row justify-content-left">
+                <div class="col-lg-12">
                     <!-- Portfolio Modal - Title -->
-                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Regístrate</h2>
+                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" align="center">Regístrate</h2>
+                    <br>
                     <!-- Icon Divider -->
                     <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -119,18 +124,26 @@
                     <!-- Formulario -->
                     <form>
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <label for="exampleInputPassword1">Nombre completo</label>
+                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Tu nombre">
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputPassword1">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          <label for="exampleInputEmail1">Correo electr&oacute;nico</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce tu correo electr&oacute;nico">
                         </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">N&uacute;mero de Tel&eacute;fono</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tu n&uacute;mero de tel&eacute;fono">
                         </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Fecha de Llegada</label>
+                            <input id="datepicker" width="276" />
+                            <script>
+                                $('#datepicker').datepicker({
+                                    uiLibrary: 'bootstrap4'
+                                });
+                            </script>
+                        </div>  
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                     <!-- Portfolio Modal - Text -->
