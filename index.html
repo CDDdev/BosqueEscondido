@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Cabañas Bosque Escondido</title>
-
-    <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <style>
         .carousel-item {
@@ -40,6 +36,12 @@
             display: none;
         }
     </style>
+
+    <!-- Script para obtener fecha -->
+    <script>
+        fechaInicial.min = new Date().toISOString().split("T")[0];
+        fechaSalida.min = new Date().toISOString().split("T")[0];
+    </script>
 
   </head>
   <body>
@@ -122,28 +124,27 @@
                     <div class="divider-custom-line"></div>
                     </div>
                     <!-- Formulario -->
-                    <form>
+                    <form action="demo.html" method="POST">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Nombre completo</label>
-                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Tu nombre">
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
                         </div>
                         <div class="form-group">
                           <label for="exampleInputEmail1">Correo electr&oacute;nico</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce tu correo electr&oacute;nico">
+                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduce tu correo electr&oacute;nico">
                         </div>
                         <div class="form-group">
                           <label for="exampleInputPassword1">N&uacute;mero de Tel&eacute;fono</label>
-                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tu n&uacute;mero de tel&eacute;fono">
+                          <input type="text" class="form-control" id="telefono" placeholder="Tu n&uacute;mero de tel&eacute;fono">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Fecha de Llegada</label>
-                            <input id="datepicker" width="276" />
-                            <script>
-                                $('#datepicker').datepicker({
-                                    uiLibrary: 'bootstrap4'
-                                });
-                            </script>
+                          <label for="exampleInputPassword1">Fecha de Llegada</label>
+                          <input type="date" class="form-control" id="fechaInicial">            
                         </div>  
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Fecha de Salida</label>
+                            <input type="date" class="form-control" id="fechaSalida">            
+                          </div> 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                     <!-- Portfolio Modal - Text -->
